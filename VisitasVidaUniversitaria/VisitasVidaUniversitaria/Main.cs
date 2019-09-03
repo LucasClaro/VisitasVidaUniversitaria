@@ -26,7 +26,14 @@ namespace VisitasVidaUniversitaria
         private void TxtEmail_Leave(object sender, EventArgs e)
         {
             visitante.email = txtEmail.Text;
-            visitante = visitante.ProcurarRegistro();
+            visitante.ProcurarRegistro();
+            txtNome.Text = visitante.nome;
+            txtTelefone.Text = visitante.telefone;
+            txtCpf.Text = visitante.cpf;
+            txtRg.Text = visitante.rg;        
+            txtCep.Text = visitante.cep;
+            if(visitante.idade != 0)
+                txtIdade.Text = visitante.idade.ToString();
         }
     }
 }
