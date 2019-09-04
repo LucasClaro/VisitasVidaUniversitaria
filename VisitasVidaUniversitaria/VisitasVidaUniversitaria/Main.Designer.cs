@@ -43,6 +43,7 @@
             this.txtCep = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtIdade = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTestConexao
@@ -67,6 +68,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(16, 30);
+            this.txtEmail.MaxLength = 100;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(196, 20);
             this.txtEmail.TabIndex = 2;
@@ -84,6 +86,7 @@
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(16, 74);
+            this.txtNome.MaxLength = 100;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(196, 20);
             this.txtNome.TabIndex = 4;
@@ -100,9 +103,11 @@
             // txtTelefone
             // 
             this.txtTelefone.Location = new System.Drawing.Point(16, 118);
+            this.txtTelefone.MaxLength = 50;
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(196, 20);
             this.txtTelefone.TabIndex = 6;
+            this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefone_KeyPress);
             // 
             // label4
             // 
@@ -116,9 +121,11 @@
             // txtCpf
             // 
             this.txtCpf.Location = new System.Drawing.Point(16, 205);
+            this.txtCpf.MaxLength = 11;
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(196, 20);
             this.txtCpf.TabIndex = 8;
+            this.txtCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCpf_KeyPress);
             // 
             // label5
             // 
@@ -132,9 +139,11 @@
             // txtRg
             // 
             this.txtRg.Location = new System.Drawing.Point(16, 249);
+            this.txtRg.MaxLength = 11;
             this.txtRg.Name = "txtRg";
             this.txtRg.Size = new System.Drawing.Size(196, 20);
             this.txtRg.TabIndex = 10;
+            this.txtRg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtRg_KeyPress);
             // 
             // label6
             // 
@@ -148,9 +157,11 @@
             // txtCep
             // 
             this.txtCep.Location = new System.Drawing.Point(16, 293);
+            this.txtCep.MaxLength = 8;
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(196, 20);
             this.txtCep.TabIndex = 12;
+            this.txtCep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCep_KeyPress);
             // 
             // label7
             // 
@@ -167,12 +178,24 @@
             this.txtIdade.Name = "txtIdade";
             this.txtIdade.Size = new System.Drawing.Size(196, 20);
             this.txtIdade.TabIndex = 14;
+            this.txtIdade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIdade_KeyPress);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(94, 414);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 15;
+            this.btnSave.Text = "Salvar";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtIdade);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtCep);
@@ -212,6 +235,7 @@
         private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtIdade;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 

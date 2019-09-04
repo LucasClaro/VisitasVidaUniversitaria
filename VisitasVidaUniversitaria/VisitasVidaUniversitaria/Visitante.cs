@@ -37,9 +37,40 @@ namespace VisitasVidaUniversitaria
                 this.cpf = dr["cpf"].ToString();
                 this.rg = dr["rg"].ToString();
                 this.cep = dr["CEP"].ToString();
-                if(!dr.IsDBNull(6))
+                if (!dr.IsDBNull(6))
                     this.idade = (int)dr["idade"];
+                else
+                    this.idade = 0;
             }
+        }
+
+        public void Salvar()
+        {
+            SqlConnection cn = Conexao.Conectar();
+            SqlCommand cmd = cn.CreateCommand();
+
+            bool inserindo = this.id == 0;
+
+            if (inserindo)
+            {
+                cmd.CommandText = "insert into Participante(nome, email, telefone, cpf, rg, CEP, idade, checkin) values (@nome, @email, @telefone, @cpf, @rg, @cep, @idade, 1);";
+            }
+            else
+            {
+                cmd.CommandText = "update Participante set nome=@nome, email=@email, telefone=@telefone, cpf=@cpf, rg=@rg, CEP=@cep, idade=@idade, checkin=1 where id=@id;";
+                cmd.Parameters.Add("@id", SqlDbType.Int).Value = this.id;
+            }
+
+            cmd.Parameters.Add("@nome", SqlDbType.VarChar, 100).Value = this.nome;
+            cmd.Parameters.Add("@email", SqlDbType.VarChar, 100).Value = this.email;
+            cmd.Parameters.Add("@telefone", SqlDbType.VarChar, 50).Value = this.telefone;
+            cmd.Parameters.Add("@cpf", SqlDbType.Char, 11).Value = this.cpf;
+            cmd.Parameters.Add("@rg", SqlDbType.VarChar, 11).Value = this.rg;
+            cmd.Parameters.Add("@cep", SqlDbType.Char, 8).Value = this.cep;
+            cmd.Parameters.Add("@idade", SqlDbType.Int).Value = this.idade;
+
+            cmd.ExecuteNonQuery();
+
         }
     }
 }
