@@ -18,17 +18,25 @@ namespace VisitasVidaUniversitaria
         public Main()
         {
             InitializeComponent();
-        }
+            this.BackColor = Color.FromArgb(206, 32, 124);
 
-        private void BtnTestConexao_Click(object sender, EventArgs e)
-        {
-            Conexao.Conectar();
+            pbQuadrado.Image = Properties.Resources.quadrado;
+            pbQuadrado.SizeMode = PictureBoxSizeMode.AutoSize;
+            pbNome.Image = Properties.Resources.Nome;
+            pbNome.SizeMode = PictureBoxSizeMode.AutoSize;
+            pbLogo.Image = Properties.Resources.logo;
+            pbLogo.SizeMode = PictureBoxSizeMode.AutoSize;
+
+            btnSave.BackColor = Color.FromArgb(206, 32, 124);
         }
 
         private void TxtEmail_Leave(object sender, EventArgs e)
         {
             visitante.email = txtEmail.Text;
-            visitante.ProcurarRegistro();
+            if (ValidarEmail(txtEmail.Text))
+            {
+                visitante.ProcurarRegistro();
+            }          
             txtNome.Text = visitante.nome;
             txtTelefone.Text = visitante.telefone;
             txtCpf.Text = visitante.cpf;
@@ -124,31 +132,31 @@ namespace VisitasVidaUniversitaria
 
         private void TxtTelefone_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!Char.IsDigit(e.KeyChar)))
+            if (!(Char.IsDigit(e.KeyChar) || Char.IsControl(e.KeyChar)))
                 e.Handled = true;
         }
 
         private void TxtIdade_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!Char.IsDigit(e.KeyChar)))
+            if (!(Char.IsDigit(e.KeyChar) || Char.IsControl(e.KeyChar)))
                 e.Handled = true;
         }
 
         private void TxtCpf_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!Char.IsDigit(e.KeyChar)))
+            if (!(Char.IsDigit(e.KeyChar) || Char.IsControl(e.KeyChar)))
                 e.Handled = true;
         }
 
         private void TxtRg_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!Char.IsDigit(e.KeyChar)))
+            if (!(Char.IsDigit(e.KeyChar) || Char.IsControl(e.KeyChar)))
                 e.Handled = true;
         }
 
         private void TxtCep_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!Char.IsDigit(e.KeyChar)))
+            if (!(Char.IsDigit(e.KeyChar) || Char.IsControl(e.KeyChar)))
                 e.Handled = true;
         }
     }

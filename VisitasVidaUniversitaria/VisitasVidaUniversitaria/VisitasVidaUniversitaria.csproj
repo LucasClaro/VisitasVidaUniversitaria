@@ -88,5 +88,29 @@
   <ItemGroup>
     <None Include="Resources\Rupee.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slide2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slide2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slide1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quadrado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\senac_logo_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

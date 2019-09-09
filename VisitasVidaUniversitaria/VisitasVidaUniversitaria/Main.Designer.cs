@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnTestConexao = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,157 +43,238 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtIdade = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.pbNome = new System.Windows.Forms.PictureBox();
+            this.pbQuadrado = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQuadrado)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnTestConexao
-            // 
-            this.btnTestConexao.Location = new System.Drawing.Point(12, 415);
-            this.btnTestConexao.Name = "btnTestConexao";
-            this.btnTestConexao.Size = new System.Drawing.Size(75, 23);
-            this.btnTestConexao.TabIndex = 0;
-            this.btnTestConexao.Text = "Testar Conexão";
-            this.btnTestConexao.UseVisualStyleBackColor = true;
-            this.btnTestConexao.Click += new System.EventHandler(this.BtnTestConexao_Click);
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Font = new System.Drawing.Font("Arial Black", 14F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(2, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.Size = new System.Drawing.Size(70, 27);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Email*";
+            this.label1.Text = "Email";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(16, 30);
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(7, 78);
             this.txtEmail.MaxLength = 100;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(196, 20);
-            this.txtEmail.TabIndex = 2;
+            this.txtEmail.Size = new System.Drawing.Size(614, 44);
+            this.txtEmail.TabIndex = 0;
             this.txtEmail.Leave += new System.EventHandler(this.TxtEmail_Leave);
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 57);
+            this.label2.Font = new System.Drawing.Font("Arial Black", 14F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(2, 136);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(73, 27);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Nome*";
+            this.label2.Text = "Nome";
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(16, 74);
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(7, 166);
             this.txtNome.MaxLength = 100;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(196, 20);
-            this.txtNome.TabIndex = 4;
+            this.txtNome.Size = new System.Drawing.Size(614, 44);
+            this.txtNome.TabIndex = 1;
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 101);
+            this.label3.Font = new System.Drawing.Font("Arial Black", 14F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(2, 225);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.Size = new System.Drawing.Size(103, 27);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Telefone*";
+            this.label3.Text = "Telefone";
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(16, 118);
+            this.txtTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.Location = new System.Drawing.Point(7, 255);
             this.txtTelefone.MaxLength = 50;
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(196, 20);
-            this.txtTelefone.TabIndex = 6;
+            this.txtTelefone.Size = new System.Drawing.Size(614, 44);
+            this.txtTelefone.TabIndex = 3;
             this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefone_KeyPress);
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 188);
+            this.label4.Font = new System.Drawing.Font("Arial Black", 14F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(312, 350);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 13);
+            this.label4.Size = new System.Drawing.Size(54, 27);
             this.label4.TabIndex = 7;
             this.label4.Text = "CPF";
             // 
             // txtCpf
             // 
-            this.txtCpf.Location = new System.Drawing.Point(16, 205);
+            this.txtCpf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpf.Location = new System.Drawing.Point(317, 380);
             this.txtCpf.MaxLength = 11;
             this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(196, 20);
-            this.txtCpf.TabIndex = 8;
+            this.txtCpf.Size = new System.Drawing.Size(304, 44);
+            this.txtCpf.TabIndex = 5;
             this.txtCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCpf_KeyPress);
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 232);
+            this.label5.Font = new System.Drawing.Font("Arial Black", 14F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(2, 350);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 13);
+            this.label5.Size = new System.Drawing.Size(43, 27);
             this.label5.TabIndex = 9;
             this.label5.Text = "RG";
             // 
             // txtRg
             // 
-            this.txtRg.Location = new System.Drawing.Point(16, 249);
+            this.txtRg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRg.Location = new System.Drawing.Point(7, 380);
             this.txtRg.MaxLength = 11;
             this.txtRg.Name = "txtRg";
-            this.txtRg.Size = new System.Drawing.Size(196, 20);
-            this.txtRg.TabIndex = 10;
+            this.txtRg.Size = new System.Drawing.Size(304, 44);
+            this.txtRg.TabIndex = 4;
             this.txtRg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtRg_KeyPress);
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 276);
+            this.label6.Font = new System.Drawing.Font("Arial Black", 14F);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(2, 430);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(28, 13);
+            this.label6.Size = new System.Drawing.Size(55, 27);
             this.label6.TabIndex = 11;
             this.label6.Text = "CEP";
             // 
             // txtCep
             // 
-            this.txtCep.Location = new System.Drawing.Point(16, 293);
+            this.txtCep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCep.Location = new System.Drawing.Point(7, 460);
             this.txtCep.MaxLength = 8;
             this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(196, 20);
-            this.txtCep.TabIndex = 12;
+            this.txtCep.Size = new System.Drawing.Size(304, 44);
+            this.txtCep.TabIndex = 6;
             this.txtCep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCep_KeyPress);
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 145);
+            this.label7.Font = new System.Drawing.Font("Arial Black", 14F);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(312, 430);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 13);
+            this.label7.Size = new System.Drawing.Size(71, 27);
             this.label7.TabIndex = 13;
             this.label7.Text = "Idade";
             // 
             // txtIdade
             // 
-            this.txtIdade.Location = new System.Drawing.Point(16, 162);
+            this.txtIdade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdade.Location = new System.Drawing.Point(317, 460);
+            this.txtIdade.MaxLength = 2;
             this.txtIdade.Name = "txtIdade";
-            this.txtIdade.Size = new System.Drawing.Size(196, 20);
-            this.txtIdade.TabIndex = 14;
+            this.txtIdade.Size = new System.Drawing.Size(133, 44);
+            this.txtIdade.TabIndex = 7;
             this.txtIdade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIdade_KeyPress);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(94, 414);
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.Font = new System.Drawing.Font("Arial Black", 24F);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(7, 536);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 15;
-            this.btnSave.Text = "Salvar";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Size = new System.Drawing.Size(274, 64);
+            this.btnSave.TabIndex = 8;
+            this.btnSave.Text = "Participar!";
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.Location = new System.Drawing.Point(7, 8);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(100, 50);
+            this.pbLogo.TabIndex = 18;
+            this.pbLogo.TabStop = false;
+            // 
+            // pbNome
+            // 
+            this.pbNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbNome.Location = new System.Drawing.Point(699, 566);
+            this.pbNome.Name = "pbNome";
+            this.pbNome.Size = new System.Drawing.Size(100, 50);
+            this.pbNome.TabIndex = 17;
+            this.pbNome.TabStop = false;
+            // 
+            // pbQuadrado
+            // 
+            this.pbQuadrado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbQuadrado.Location = new System.Drawing.Point(700, -1);
+            this.pbQuadrado.Name = "pbQuadrado";
+            this.pbQuadrado.Size = new System.Drawing.Size(100, 50);
+            this.pbQuadrado.TabIndex = 16;
+            this.pbQuadrado.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial Black", 14F);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(2, 317);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(131, 27);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "(Opcionais)";
             // 
             // Main
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Fuchsia;
+            this.ClientSize = new System.Drawing.Size(800, 618);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.pbLogo);
+            this.Controls.Add(this.pbNome);
+            this.Controls.Add(this.pbQuadrado);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtIdade);
             this.Controls.Add(this.label7);
@@ -210,17 +290,19 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnTestConexao);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
             this.Text = "VidaUniversitária";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQuadrado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnTestConexao;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label2;
@@ -236,6 +318,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtIdade;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.PictureBox pbQuadrado;
+        private System.Windows.Forms.PictureBox pbNome;
+        private System.Windows.Forms.PictureBox pbLogo;
+        private System.Windows.Forms.Label label8;
     }
 }
 
