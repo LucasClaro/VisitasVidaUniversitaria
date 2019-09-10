@@ -13,7 +13,7 @@ namespace VisitasVidaUniversitaria
         public static SqlConnection Conectar()
         {
             SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = "Server=10.135.0.53\\sqledutsi;Database=VidaUniversitaria;User Id=Lucas; password=supermario;";
+            cn.ConnectionString = "Server=10.135.0.53\\sqledutsi;Database=VidaUniversitaria;User Id=Lucas; password=supermario;Connection Timeout = 5";
             cn.Open();
             return (cn);
         } 

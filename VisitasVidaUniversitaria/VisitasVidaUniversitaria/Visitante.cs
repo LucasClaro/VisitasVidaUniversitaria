@@ -24,6 +24,7 @@ namespace VisitasVidaUniversitaria
         {
             SqlConnection cn = Conexao.Conectar();
             SqlCommand cmd = cn.CreateCommand();
+            cmd.CommandTimeout = 3;
 
             cmd.CommandText = "select id, nome, telefone, cpf, rg, CEP, idade from Participante where email = @email";
             cmd.Parameters.Add("@email", SqlDbType.VarChar, 100).Value = this.email;
@@ -41,6 +42,9 @@ namespace VisitasVidaUniversitaria
                     this.idade = (int)dr["idade"];
                 else
                     this.idade = 0;
+
+                cn.Close();
+                cn.Dispose();
             }
         }
 
@@ -48,6 +52,7 @@ namespace VisitasVidaUniversitaria
         {
             SqlConnection cn = Conexao.Conectar();
             SqlCommand cmd = cn.CreateCommand();
+            cmd.CommandTimeout = 3;
 
             bool inserindo = this.id == 0;
 
@@ -70,7 +75,8 @@ namespace VisitasVidaUniversitaria
             cmd.Parameters.Add("@idade", SqlDbType.Int).Value = this.idade;
 
             cmd.ExecuteNonQuery();
-
+            cn.Close();
+            cn.Dispose();
         }
     }
 }

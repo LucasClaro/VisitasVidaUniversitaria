@@ -73,6 +73,16 @@ namespace VisitasVidaUniversitaria.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mensagem {
+            get {
+                object obj = ResourceManager.GetObject("mensagem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Nome {
             get {
                 object obj = ResourceManager.GetObject("Nome", resourceCulture);
@@ -96,6 +106,15 @@ namespace VisitasVidaUniversitaria.Properties {
         internal static System.IO.UnmanagedMemoryStream Rupee {
             get {
                 return ResourceManager.GetStream("Rupee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream smb3_1_up {
+            get {
+                return ResourceManager.GetStream("smb3_1_up", resourceCulture);
             }
         }
     }

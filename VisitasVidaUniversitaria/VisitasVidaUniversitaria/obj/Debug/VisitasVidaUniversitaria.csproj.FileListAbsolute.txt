@@ -8,3 +8,4 @@ C:\Users\lucas\Documents\GitHub\VisitasVidaUniversitaria\VisitasVidaUniversitari
 C:\Users\lucas\Documents\GitHub\VisitasVidaUniversitaria\VisitasVidaUniversitaria\VisitasVidaUniversitaria\bin\Debug\VisitasVidaUniversitaria.pdb
 C:\Users\lucas\Documents\GitHub\VisitasVidaUniversitaria\VisitasVidaUniversitaria\VisitasVidaUniversitaria\obj\Debug\VisitasVidaUniversitaria.exe
 C:\Users\lucas\Documents\GitHub\VisitasVidaUniversitaria\VisitasVidaUniversitaria\VisitasVidaUniversitaria\obj\Debug\VisitasVidaUniversitaria.pdb
+C:\Users\lucas\Documents\GitHub\VisitasVidaUniversitaria\VisitasVidaUniversitaria\VisitasVidaUniversitaria\obj\Debug\VisitasVidaUniversitaria.Mensagem.resources

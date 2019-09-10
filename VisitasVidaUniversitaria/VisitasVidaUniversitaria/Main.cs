@@ -15,9 +15,12 @@ namespace VisitasVidaUniversitaria
     public partial class Main : Form
     {
         Visitante visitante = new Visitante();
+        SoundPlayer player;
         public Main()
         {
             InitializeComponent();
+            player = new SoundPlayer(Properties.Resources.smb3_1_up);
+
             this.BackColor = Color.FromArgb(206, 32, 124);
 
             pbQuadrado.Image = Properties.Resources.quadrado;
@@ -35,7 +38,19 @@ namespace VisitasVidaUniversitaria
             visitante.email = txtEmail.Text;
             if (ValidarEmail(txtEmail.Text))
             {
-                visitante.ProcurarRegistro();
+                try
+                {
+                    this.Cursor = Cursors.WaitCursor;
+                    visitante.ProcurarRegistro();
+                }
+                catch
+                {
+                    MessageBox.Show("Algo de errado. Peça ajuda.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                finally
+                {
+                    this.Cursor = Cursors.Default;
+                }
             }          
             txtNome.Text = visitante.nome;
             txtTelefone.Text = visitante.telefone;
@@ -66,9 +81,28 @@ namespace VisitasVidaUniversitaria
                         int num = 0;
                         if (int.TryParse(txtIdade.Text, out num))
                             visitante.idade = Convert.ToInt32(txtIdade.Text);
-                        //visitante.Salvar();
+
+                        try
+                        {
+                            this.Cursor = Cursors.WaitCursor;
+                            visitante.Salvar();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Algo de errado. Peça ajuda.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        finally
+                        {
+                            this.Cursor = Cursors.Default;
+                        }
+                        
                         TocarSom();
                         LimparCampos();
+                        txtEmail.Focus();
+                        visitante = new Visitante();
+
+                        Mensagem mensagem = new Mensagem();
+                        mensagem.ShowDialog();
                     }
                     else
                     {
@@ -126,7 +160,6 @@ namespace VisitasVidaUniversitaria
 
         public void TocarSom()
         {
-            System.Media.SoundPlayer player = new SoundPlayer(Properties.Resources.Rupee);
             player.Play();
         } 
 
