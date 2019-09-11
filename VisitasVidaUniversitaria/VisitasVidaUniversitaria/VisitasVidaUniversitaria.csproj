@@ -113,9 +113,6 @@
     <None Include="Resources\Nome.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\quadrado.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\senac_logo_branco.png" />
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +123,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\smb3_1-up.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quadrado.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
