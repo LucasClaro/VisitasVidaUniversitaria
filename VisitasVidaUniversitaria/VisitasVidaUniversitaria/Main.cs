@@ -86,6 +86,14 @@ namespace VisitasVidaUniversitaria
                         {
                             this.Cursor = Cursors.WaitCursor;
                             visitante.Salvar();
+
+                            TocarSom();
+                            LimparCampos();
+                            txtEmail.Focus();
+                            visitante = new Visitante();
+
+                            Mensagem mensagem = new Mensagem();
+                            mensagem.ShowDialog();
                         }
                         catch
                         {
@@ -94,15 +102,7 @@ namespace VisitasVidaUniversitaria
                         finally
                         {
                             this.Cursor = Cursors.Default;
-                        }
-                        
-                        TocarSom();
-                        LimparCampos();
-                        txtEmail.Focus();
-                        visitante = new Visitante();
-
-                        Mensagem mensagem = new Mensagem();
-                        mensagem.ShowDialog();
+                        }                                                                       
                     }
                     else
                     {
