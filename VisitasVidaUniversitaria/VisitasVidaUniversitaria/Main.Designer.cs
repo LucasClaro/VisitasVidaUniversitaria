@@ -164,7 +164,6 @@
             this.txtRg.Name = "txtRg";
             this.txtRg.Size = new System.Drawing.Size(304, 44);
             this.txtRg.TabIndex = 4;
-            this.txtRg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtRg_KeyPress);
             // 
             // label6
             // 
